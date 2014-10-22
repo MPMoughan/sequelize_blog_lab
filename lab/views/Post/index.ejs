@@ -1,0 +1,28 @@
+<% include partials/header %>
+
+
+<div class="row">
+  <div class="col-md-7 col-md-offset-1">
+
+    <h1>Daily Planet Article List</h1>
+    <a href="/Posts/New">Add an Article</a>
+    <br>
+
+    <% allPosts.forEach(function(post){ %>
+
+    <p>
+      <a href="/Posts/<%= post.id %>"> <%= post.title %></a>
+      by <%= post.AuthorId %>
+    <p>
+
+    <form action="/Posts/<%= post.id %>?_method=delete" method="post">
+      <input type="submit" value="Delete">
+    </form>
+    <a href="/books/<%= post.id %>/edit">Edit</a>
+    <% }); %>
+  </div>
+
+  <div class="col-md-3 col-md-offset-1"></div>
+
+</div>
+<% include partials/footer %>

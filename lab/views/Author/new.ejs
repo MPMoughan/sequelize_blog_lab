@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<div class="row">
+  <div class="col-md-7 col-md-offset-1">
+
+<% if (typeof errMsg !== 'undefined') {%>
+  <h3 style="color:red"> <%= errMsg %> </h3>
+<% }; %>
+
+<h3>Post New Articles Here!</h3>
+<br>
+
+  <form action="/Posts" method="post">
+    <input name="post[title]" placeholder="title" value="<%= title %>">
+    <br>
+    <input name="post[body]" placeholder="body" value="<%= body %>" class="form-control input-lg" type="text" id="inputLarge">
+    <br>
+    <input type="submit" class="btn btn-default" value="Save">
+  </form>
+
+  </div>
+  <div class="col-md-3 col-md-offset-1"></div>
+</div>
+
+
+<% include partials/footer %>

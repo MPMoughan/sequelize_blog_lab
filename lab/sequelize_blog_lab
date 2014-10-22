@@ -1,0 +1,87 @@
+\c sequelizeblog
+\dt
+\dt
+\d
+\dt
+SELECT * FROM "Posts";
+SELECT * FROM "Authors";
+DROP TABLE "Posts";
+DROP TABLE "Authors";
+sqlize db:migrate
+;
+sqlize db:mirgrate;
+sequelize db:migrate;
+history
+;
+\c sequelizeblog
+sqlize db:migrate;
+\s
+db:migrate
+;
+sqlize db:migrate
+;
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text
+;
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text;
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text
+sequelize model:create --name Author  --attributes first_name:string,last_name:string,bio:text;
+sequelize model:create --name Author  --attributes first_name:string,last_name:string,bio:text
+\q
+\c sequelizeblog
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text;
+sequelize model:create --name Author  --attributes first_name:string,last_name:string,bio:text
+model:create --name Author  --attributes first_name:string,last_name:string,bio:text
+;
+model:create --name Author  --attributes first_name:string,last_name:string,bio:text
+;
+\q
+\c sequelizeblog
+DROP TABLE "Author";
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text 
+\dt
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text;
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text;
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text 
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text
+;
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text
+;
+\q
+\c sequelizeblog
+sqlize model:create --name Author  --attributes first_name:string,last_name:string,bio:text
+;
+DROP TABLE "Author";
+DROP TABLE "Authors";
+\dt
+sqlize model:create --name Post --attributes post:string, body:text
+;
+sqlize model:create --name Post --attributes post:string,body:text
+;
+sqlize model:create --name Post --attributes post:string,body:text
+;
+sqlize model:create --name Post --attributes post:string,body:text
+;
+\q
+sqlize init
+;
+\q
+\c sequelizeblog 
+\dt
+SELECT * FROM "Posts";
+\q
+\c sequelize lab
+\c sequelizeblog
+\dt
+SELECT * ALL FROM "Authors";
+SELECT * FROM "Authors";
+\q
+\c movie_example
+\c movieExample
+\c movieExample
+\c movieExample
+\c movieExample
+\dt
+\q
+\s sequelize_blog_lab
