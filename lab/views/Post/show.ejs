@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+
+<p> Here are the author's posts:
+<!-- SHOW for post -->
+  <% posts.forEach(function(post){ %>
+    <p>
+      Title: <%= post.title%>
+      <br>
+      Article: <%= post.body%>
+    </p>
+  <% }) %>
+
+<a href="/Authors">Go Back to Author's Page</a>
+
+<% include ../partials/footer %>

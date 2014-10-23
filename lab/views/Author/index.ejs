@@ -1,27 +1,35 @@
-<% include partials/header %>
+<% include ../partials/header %>
 
+<!-- INDEX PAGE FOR AUTHOR -->
 
 <div class="row">
   <div class="col-md-7 col-md-offset-1">
 
-    <h1>Daily Planet Article List</h1>
-    <a href="/Posts/New">Add an Article</a>
+    <h1>Daily Planet Author List</h1>
+    <a href="/Authors/New">Authors Register Here</a>
     <br>
 
     <% allAuthors.forEach(function(author){ %>
 
     <p>
       <a href="/Authors/<%= author.id %>"> <%= author.name %></a>
+      <!-- Link to Author info  -->
     <p>
 
-    <form action="/Posts/<%= post.id %>?_method=delete" method="post">
+    <p>
+      <a href="/Posts/<%= author.id %>/New">Add a new post</a>
+      <!-- Link to add new post -->
+    <p>
+
+    <form action="/Authors/<%= author.id %>?_method=delete" method="post">
       <input type="submit" value="Delete">
     </form>
-    <a href="/books/<%= post.id %>/edit">Edit</a>
+       <br>
+    <a href="/Authors/<%= author.id %>/edit">Edit</a>
     <% }); %>
   </div>
 
   <div class="col-md-3 col-md-offset-1"></div>
 
 </div>
-<% include partials/footer %>
+<% include ../partials/footer %>

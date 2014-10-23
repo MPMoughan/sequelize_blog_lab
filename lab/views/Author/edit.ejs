@@ -1,1 +1,15 @@
-edit.ejs
+<% include ../partials/header %>
+
+<!-- EDIT ejs file for Author -->
+
+<% if (typeof errMsg !== 'undefined') {%>
+  <h3 style="color:red"> <%= errMsg %> </h3>
+<% }; %>
+
+  <form action="/Authors/<%= author.id %>?_method=put" method="post">
+    <input name="author[name]" value="<%= author.name %>">
+    <input name="author[age]" value="<%= author.age %>">
+    <input type="submit" value="Save">
+  </form>
+
+  <% include ../partials/footer %>

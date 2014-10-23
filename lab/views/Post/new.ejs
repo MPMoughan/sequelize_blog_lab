@@ -1,4 +1,4 @@
-<% include partials/header %>
+<% include ../partials/header %>
 
 <div class="row">
   <div class="col-md-7 col-md-offset-1">
@@ -10,7 +10,7 @@
 <h3>Post New Articles Here!</h3>
 <br>
 
-  <form action="/Posts" method="post">
+  <form action="/Posts/<%= author.id %>" method="post">
     <input name="post[title]" placeholder="title" value="<%= title %>">
     <br>
     <input name="post[body]" placeholder="body" value="<%= body %>" class="form-control input-lg" type="text" id="inputLarge">
@@ -23,4 +23,4 @@
 </div>
 
 
-<% include partials/footer %>
+<% include ../partials/footer %>

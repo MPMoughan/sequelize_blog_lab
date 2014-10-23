@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<!-- SHOW for AUTHOR -->
+
+  <h2>A little info about our author!</h2>
+  <p>
+    <br>
+    Name: <%= author.name%>
+    <br>
+    Age: <%= author.age%>
+  </p>
+
+
+  <h3>Posts by <%= author.name%> </h2>
+
+    <% posts.forEach(function(post){ %>
+    <p>
+      <a href="/Posts/<%= post.AuthorId%>"> <%= post.title %></a>
+    </p>
+  <% }) %>
+
+
+<a href="/Authors">Back to Author's Page</a>
+
+<% include ../partials/footer %>

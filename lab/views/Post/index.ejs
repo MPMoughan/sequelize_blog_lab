@@ -1,28 +1,32 @@
-<% include partials/header %>
+<% include ../partials/header %>
 
+<!-- POST index -->
 
 <div class="row">
   <div class="col-md-7 col-md-offset-1">
 
     <h1>Daily Planet Article List</h1>
-    <a href="/Posts/New">Add an Article</a>
+
+    <h3>Want to add an article? you must log in as an author</h3>
+    <a href="/Authors">Authors Here</a>
     <br>
 
-    <% allPosts.forEach(function(post){ %>
+    <% posts.forEach(function(post){ %>
 
     <p>
-      <a href="/Posts/<%= post.id %>"> <%= post.title %></a>
-      by <%= post.AuthorId %>
+      <a href="/Posts/<%= post.AuthorId%>"> <%= post.title %></a>
+      <br>
+      by <a href="/Authors/<%=post.Author.id%>"> <%=post.Author.name%> </a>
     <p>
 
-    <form action="/Posts/<%= post.id %>?_method=delete" method="post">
-      <input type="submit" value="Delete">
-    </form>
-    <a href="/books/<%= post.id %>/edit">Edit</a>
+      <form action="/Posts/<%= post.id %>?_method=delete" method="post">
+        <input type="submit" value="Delete">
+      </form>
+      <a href="/Posts/<%= post.id %>/edit">Edit</a>
     <% }); %>
   </div>
 
   <div class="col-md-3 col-md-offset-1"></div>
 
-</div>
-<% include partials/footer %>
+
+<% include ../partials/footer %>
